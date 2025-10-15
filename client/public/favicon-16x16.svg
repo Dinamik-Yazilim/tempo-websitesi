@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#020617;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Arka plan daire -->
+  <circle cx="8" cy="8" r="8" fill="url(#gradient)" />
+  
+  <!-- T harfi -->
+  <g fill="white">
+    <!-- Üst yatay çizgi -->
+    <rect x="2" y="3" width="12" height="2" rx="1" />
+    <!-- Dikey çizgi -->
+    <rect x="6.5" y="3" width="3" height="10" rx="1.5" />
+  </g>
+</svg>

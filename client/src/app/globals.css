@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* Dark mode setup */
+html {
+  transition: color-scheme 0.3s ease;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Root variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-blue: #1e40af;
+  --primary-light: #3b82f6;
+  --accent-orange: #f97316;
+}
+
+html.light {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-blue: #1e40af;
+  --primary-light: #3b82f6;
+  --accent-orange: #f97316;
+}
+
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary-blue: #3b82f6;
+  --primary-light: #60a5fa;
+  --accent-orange: #fb923c;
+}
+
+/* Body styles */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Inter, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure light mode works */
+html.light body,
+html:not(.dark) body {
+  background-color: #ffffff !important;
+  color: #171717 !important;
+}
+
+/* Ensure dark mode works */
+html.dark body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+
+/* Dark mode specific overrides */
+html.dark .bg-white { background-color: #1f2937 !important; }
+html.dark .bg-gray-50 { background-color: #374151 !important; }
+html.dark .bg-gray-100 { background-color: #4b5563 !important; }
+html.dark .bg-blue-100 { background-color: #1e3a8a !important; }
+html.dark .bg-green-100 { background-color: #14532d !important; }
+html.dark .bg-orange-100 { background-color: #9a3412 !important; }
+html.dark .bg-purple-100 { background-color: #581c87 !important; }
+html.dark .bg-red-100 { background-color: #991b1b !important; }
+
+html.dark .text-gray-900 { color: #f9fafb !important; }
+html.dark .text-gray-700 { color: #d1d5db !important; }
+html.dark .text-gray-600 { color: #9ca3af !important; }
+html.dark .text-blue-600 { color: #60a5fa !important; }
+html.dark .text-green-600 { color: #4ade80 !important; }
+html.dark .text-orange-600 { color: #fb923c !important; }
+html.dark .text-purple-600 { color: #a855f7 !important; }
+html.dark .text-red-600 { color: #f87171 !important; }
+
+html.dark .border-gray-200 { border-color: #4b5563 !important; }
+html.dark .border-gray-300 { border-color: #6b7280 !important; }
+
+.font-rubik-maze {
+  font-family: 'Rubik Maze', cursive;
+}
+
+/* Custom utility classes */
+.gradient-bg {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #f97316 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #1e40af, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
